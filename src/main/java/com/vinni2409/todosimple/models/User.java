@@ -43,7 +43,7 @@ public class User {
     @Column(name = "password", length = 60, nullable = false)
     @NotNull(groups = {CreateUser.class, UpdateUser.class})
     @NotEmpty(groups = {CreateUser.class, UpdateUser.class})
-    @Size(groups = {CreateUser.class, UpdateUser.class}, min = 8, max = 60)
+    @Size(groups = {CreateUser.class, UpdateUser.class}, min = 5, max = 60)
     private String password;
 
     @OneToMany(mappedBy = "user")
